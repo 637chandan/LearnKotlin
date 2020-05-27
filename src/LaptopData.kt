@@ -21,7 +21,7 @@ data class LaptopData(val name: String, val price: Int) {
 // Now this class will act as Object .. no need for creating object
 
 object LaptopStore{
-    addin gerror 
+   
     var laptops  = arrayListOf<LaptopData>()
 
     fun showLaptops(){
