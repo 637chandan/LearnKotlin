@@ -23,7 +23,7 @@ data class LaptopData(val name: String, val price: Int) {
 object LaptopStore{
    
     var laptops  = arrayListOf<LaptopData>()
-
+    println("In laptop store")
     fun showLaptops(){
         for(i in laptops){
             println(i)
