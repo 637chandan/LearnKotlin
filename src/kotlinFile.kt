@@ -233,29 +233,3 @@ interface AnnoyInner {
 
     fun justPrint()
 }
-
-class Solution {
-    fun findMaxForm(strs: Array<String>, m: Int, n: Int): Int {
-        val compare: Comparator<String> = object : Comparator<String> {
-            override fun compare(o1: String, o2: String): Int {
-                if (o1.length > o2.length) return 1 else return -1
-            }
-
-        }
-        var a = m
-        var b = n
-        Arrays.sort(strs, compare);
-        var res = 0
-        for (i in strs) {
-            val x = i.toCharArray()
-            for (j in x) {
-                if ((j - '0') == 0) a-- else b--
-                if (a < 0 || b < 0)
-                    return res
-
-            }
-            res++
-        }
-        return res;
-    }
-}
