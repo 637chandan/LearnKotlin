@@ -21,10 +21,11 @@ data class LaptopData(val name: String, val price: Int) {
 // Now this class will act as Object .. no need for creating object
 
 object LaptopStore{
-   
+
     var laptops  = arrayListOf<LaptopData>()
-    println("In laptop store")
+
     fun showLaptops(){
+        println("IN singleton class")
         for(i in laptops){
             println(i)
         }
